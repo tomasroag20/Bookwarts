@@ -1,0 +1,360 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #e9eaf1;
+  background: #101522;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --bw-bg: #101522;
+  --bw-surface: #1b2233;
+  --bw-surface-2: #252d40;
+  --bw-gold: #d7b56d;
+  --bw-gold-light: #f1d89b;
+  --bw-text: #e9eaf1;
+  --bw-muted: #b7bdcb;
+  --bw-border: #394154;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 15% 5%,
+      rgba(144, 102, 47, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 60%,
+      rgba(53, 69, 116, 0.15),
+      transparent 35%
+    ),
+    var(--bw-bg);
+  color: var(--bw-text);
+  font-family: 'Inter', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--bw-gold-light);
+}
+
+p {
+  line-height: 1.65;
+}
+
+.text-muted {
+  color: var(--bw-muted) !important;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+.bookwarts-navbar {
+  background: rgba(13, 18, 30, 0.96) !important;
+  border-bottom: 1px solid rgba(215, 181, 109, 0.3);
+  box-shadow: 0 5px 24px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.bookwarts-navbar .navbar-brand {
+  color: var(--bw-gold-light) !important;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+}
+
+.bookwarts-navbar .nav-link {
+  color: #d2d5df !important;
+  border-radius: 9px;
+  padding: 9px 13px !important;
+  transition: 0.2s;
+}
+
+.bookwarts-navbar .nav-link:hover,
+.bookwarts-navbar .nav-link.active {
+  background: rgba(215, 181, 109, 0.13);
+  color: var(--bw-gold-light) !important;
+}
+
+/* TARJETAS */
+
+.card {
+  background: var(--bw-surface);
+  border: 1px solid var(--bw-border);
+  border-radius: 17px;
+  color: var(--bw-text);
+  overflow: hidden;
+}
+
+.card-header {
+  border-bottom: 1px solid var(--bw-border);
+}
+
+.card-footer {
+  background: var(--bw-surface-2);
+  border-top: 1px solid var(--bw-border);
+}
+
+.card h4,
+.card h5 {
+  color: var(--bw-gold-light);
+}
+
+/* FORMULARIOS */
+
+.form-control,
+.form-select {
+  background: #121a2a;
+  border: 1px solid #485167;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 11px 13px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: #172136;
+  color: white;
+  border-color: var(--bw-gold);
+  box-shadow: 0 0 0 3px rgba(215, 181, 109, 0.16);
+}
+
+.form-control::placeholder {
+  color: #a9afbf;
+}
+
+.form-select option {
+  background: #172136;
+  color: white;
+}
+
+.form-label {
+  color: #d8dbe4;
+  font-weight: 600;
+}
+
+/* BOTONES */
+
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background: var(--bw-gold);
+  color: #171b27;
+  border-color: var(--bw-gold);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--bw-gold-light);
+  border-color: var(--bw-gold-light);
+  color: #171b27;
+}
+
+.btn-outline-primary {
+  color: var(--bw-gold-light);
+  border-color: var(--bw-gold);
+}
+
+.btn-outline-primary:hover {
+  background: var(--bw-gold);
+  color: #171b27;
+  border-color: var(--bw-gold);
+}
+
+.btn-dark {
+  background: #343e56;
+  border-color: #48536c;
+}
+
+.btn-outline-dark {
+  color: #e6e8ef;
+  border-color: #626b80;
+}
+
+.btn-outline-dark:hover {
+  background: #343e56;
+  color: white;
+}
+
+/* CASAS */
+
+.casa-card {
+  min-height: 245px;
+  position: relative;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.casa-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.casa-gryffindor {
+  border-top: 5px solid #b94149;
+}
+
+.casa-slytherin {
+  border-top: 5px solid #278c65;
+}
+
+.casa-ravenclaw {
+  border-top: 5px solid #4b82d0;
+}
+
+.casa-hufflepuff {
+  border-top: 5px solid #e1b94b;
+}
+
+/* PUBLICACIONES */
+
+.publicacion-card {
+  transition: transform 0.2s;
+}
+
+.publicacion-card:hover {
+  transform: translateY(-2px);
+}
+
+.publicacion-contenido {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* CHAT */
+
+.bookwarts-chat {
+  min-height: 440px;
+}
+
+.bookwarts-chat-mensajes {
+  height: 400px;
+  overflow-y: auto;
+  background: #151d2d !important;
+}
+
+.bookwarts-chat-mensajes .bg-light {
+  background: #303a4f !important;
+  color: #ffffff !important;
+}
+
+.bookwarts-chat-mensajes .text-dark {
+  color: #ffffff !important;
+}
+
+.bookwarts-chat-mensajes .bg-primary {
+  background: #71562f !important;
+}
+
+.bookwarts-chat .card-header.bg-dark {
+  background: #252f44 !important;
+}
+
+/* TABLAS ADMINISTRATIVAS */
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: #e9eaf1;
+  --bs-table-border-color: #434b5e;
+  --bs-table-striped-bg: #252d40;
+  --bs-table-striped-color: #ffffff;
+}
+
+.table th {
+  color: var(--bw-gold-light);
+}
+
+.list-group-item {
+  background: #252d40;
+  color: #ffffff;
+  border-color: #454d61 !important;
+}
+
+.list-group-item:hover {
+  background: #35405a;
+  color: white;
+}
+
+.list-group-item.active {
+  background: #705a35;
+  border-color: var(--bw-gold) !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .bookwarts-navbar .navbar-collapse {
+    padding: 14px 0;
+  }
+
+  .bookwarts-navbar .nav-link {
+    margin-bottom: 5px;
+  }
+
+  .bookwarts-chat-mensajes {
+    height: 360px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .card {
+    border-radius: 13px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+
+  .bookwarts-chat-mensajes {
+    height: 52vh;
+    min-height: 270px;
+  }
+
+  .table-responsive {
+    font-size: 0.85rem;
+  }
+}

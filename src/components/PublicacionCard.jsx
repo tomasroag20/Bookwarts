@@ -71,9 +71,9 @@ export default function PublicacionCard({
           )}
         </div>
 
-        <p style={{ whiteSpace: 'pre-wrap' }}>
-          {publicacion.contenido}
-        </p>
+      <p className="publicacion-contenido">
+  {publicacion.contenido}
+</p>
 
         <hr />
 
